@@ -28,6 +28,8 @@ public class Blog
     [DataType(DataType.Date)]
     public DateTime DataPublicacao { get; set; }
 
+    public ICollection<BlogTag> BlogTags { get; set; }
+
 }
 
 
