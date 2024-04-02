@@ -8,7 +8,7 @@ namespace ConectaCafe.Models;
 public class Avaliacao
 {
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.None)] 
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
     public int Id { get; set; }
 
     

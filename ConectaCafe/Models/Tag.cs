@@ -7,7 +7,7 @@ namespace ConectaCafe.Models;
 public class Tag
 {
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.None)] 
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe o nome!😡😡😡")]
