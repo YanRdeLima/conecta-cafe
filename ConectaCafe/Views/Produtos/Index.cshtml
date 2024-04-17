@@ -1,6 +1,7 @@
-@model IEnumerable<ConectaCafe.Models.Categoria>
+@model IEnumerable<ConectaCafe.Models.Produto>
+
 @{
-    ViewData["Title"] = "Categorias";
+    ViewData["Title"] = "Produtos";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -25,16 +26,27 @@
                                 <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Nome
                                 </th>
                                 <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">
-                                    Ações</th>
+                                    Categoria</th>
+                                <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">
+                                    Preço</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td class="text-dark">
+                                    <td class="text-dark text-sm">
                                         @Html.DisplayFor(modelItem => item.Nome)
                                     </td>
+
+                                    <td class="text-dark text-sm">
+                                        @Html.DisplayFor(modelItem => item.Categoria.Nome)
+                                    </td>
+
+                                    <td class="text-dark text-sm">
+                                        @Html.DisplayFor(modelItem => item.Preco)
+                                    </td>
+
                                     <td>
                                         <a asp-action="Edit" asp-route-id="@item.Id" title="Alterar">
                                             <i class="material-icons me-2">edit</i>
@@ -75,5 +87,5 @@
             }
         });
     </script>
-    
+
 }
