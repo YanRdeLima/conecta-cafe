@@ -34,9 +34,9 @@
                         <div class="col-12 mb-3">
                             <div class="input-group input-group-outline mb-1">
                                 <label asp-for="Descricao" class="form-label"></label>
-                                <textarea asp-for="Descricao" class="form-control" rows=5 cols=7 /></textarea>
+                                <textarea asp-for="Descricao" class="form-control" rows="5" ></textarea>
                             </div>
-                            <span asp-validation-for="Descricao" class="text-danger sm"></span>
+                            <span asp-validation-for="Descricao" class="text-danger text-sm"></span>
                         </div>
 
                         <div class="row">
@@ -62,14 +62,16 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
 
                     <div class="col-lg-4 col-md-3 d-flex justify-content-center">
-                            <img id="Preview" src="~/img/Produto-Sem-Imagem-600-x-600px.jpg" class="w-70" alt="Foto" onclick="changeImage()">
-                            <input type="hidden" asp-for="Foto">
-                            <input type="file" id="Arquivo" name="Arquivo" accept=".jpeg, .jpg, .png, .gif, .jfif, .webp" hidden>
-                        </div>
+                        <img id="Preview" src="~/img/Produto-Sem-Imagem-600-x-600px.jpg" class="w-70" alt="Foto"
+                            onclick="changeImage()">
+                        <input type="hidden" asp-for="Foto">
+                        <input type="file" id="Arquivo" name="Arquivo" accept=".jpeg, .jpg, .png, .gif, .jfif, .webp"
+                            hidden>
+                    </div>
 
                     <div class="mb-3">
                         <input type="submit" value="Salvar" class="btn btn-success me-3" />
@@ -89,15 +91,15 @@
             document.querySelector("input[type='file']").click();
         }
 
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             document.querySelector("input[type='file']")
-               .addEventListener('change', function() {
+                .addEventListener('change', function () {
                     if (this.files && this.files[0]) {
                         var img = document.getElementById("Preview");
                         img.src = URL.createObjectURL(this.files[0]);
                     }
                 });
         })
-        
+
     </script>
 }

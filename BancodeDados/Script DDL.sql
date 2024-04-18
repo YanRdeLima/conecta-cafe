@@ -15,7 +15,7 @@ create table Produto
 (
 	id		int	not null identity,
 	Nome	varchar(60) not null,
-	Descrição varchar(200),
+	Descricao varchar(200),
 	Preco	decimal(8,2) not null,
 	Foto	varchar(200)
 	CategoriaId int not null,
@@ -28,7 +28,7 @@ create table Avaliacao
 (
 	id		int	not null identity,
 	Pessoa	varchar(60) not null,
-	Título  varchar(100) not null,
+	Tï¿½tulo  varchar(100) not null,
 	Texto   varchar(700) not null,
 	Nota    decimal(1,0),
 	DataAvaliacao date,
@@ -38,7 +38,7 @@ create table Avaliacao
 create table Blog
 (
 	id		int	not null identity,
-	Título  varchar(100) not null,
+	Tï¿½tulo  varchar(100) not null,
 	Texto   varchar(700) not null,
 	Foto	varchar(200),
 	DataBlog datetime,
